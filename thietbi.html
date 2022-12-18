@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>THIẾT BỊ</title>
+        
+        <link rel="stylesheet" href="scss.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="logo">
+                <img src="logo-news.png" alt="">
+            </div>
+            <div class="Name-group">
+                <h1>ĐỒ ÁN TỐT NGHIỆP</h1>
+            </div>
+        </div>
+        
+        <div id="main1">
+            <div class="topnav">
+                <a class="active" href="index.html">HOME</a>
+                <a href="thietbi.html">THIẾT BỊ</a>
+                <a href="moitruong.html">MÔI TRƯỜNG</a>
+                <a href="setup.html">CÀI ĐẶT</a>  
+            </div>
+            <div id="time"> </div>
+            <script>
+                function dongho() {
+                var time = new Date();
+                var gio = time.getHours();
+                var phut = time.getMinutes();
+                var giay = time.getSeconds();
+                if (gio < 10) 
+                gio = "0" + gio;
+                if (phut < 10) 
+                phut = "0" + phut;
+                if (giay < 10) 
+                giay = "0" + giay;
+                document.getElementById("time").innerHTML = gio + ":" + phut + ":" + giay;
+                setTimeout("dongho()", 1000);
+                };
+                dongho();
+            </script>
+        </div>
+
+        <div id= "maintop"> 
+            <h1> <center><img src="fan.png" id="fan"></center></h1>
+
+            <h1> <center><img src="light_bulb_off.png" id="light"></center></h1>
+
+            <h1> <center><img src="light_bulb_off.png" id="heating_lamp"></center></h1> 
+             
+            <h2>Quạt</h2>
+
+            <h3>Đèn</h3>
+
+            <h4>Đèn sưởi</h4>
+        </div>
+
+        <div id="maintop1">
+            <h1> <center><img src="pump4.png" id="pump1"></center></h1>
+
+            <h1> <center><img src="pump4.png" id="pump2"></center></h1>
+
+            <h1> <center><img src="pump4.png" id="pump_mist"></center></h1> 
+             
+            <h2>Máy bơm 1</h2>
+
+            <h3>Máy bơm 2</h3>
+
+            <h4>Phun Sương</h4>
+        </div>
+
+        <script src="scripts.js"></script>
+
+<!---------------------------- FIREBASE ----------------------------------------------->
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+
+<script>
+  var firebaseConfig = {
+   apiKey: "AIzaSyD9FshL63D_x-XrGJrQ9vkSb5VRmIGHrIk",
+  authDomain: "doantotnghiep-692fb.firebaseapp.com",
+   databaseURL: "https://doantotnghiep-692fb-default-rtdb.firebaseio.com",
+   projectId: "doantotnghiep-692fb",
+   storageBucket: "doantotnghiep-692fb.appspot.com",
+  messagingSenderId: "1042420430022",
+   appId: "1:1042420430022:web:210140d841759a22a7d3c7",
+  measurementId: "G-Z5LW8TKPPS"
+   
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+<!---------------------------- FIREBASE ----------------------------------------------->
+    <script>
+        firebase.database().ref("/current/fan").on("value", function(snapshot){
+        var ss = snapshot.val();
+        if (ss==1)
+        document.getElementById("fan").src = "fan-gif.gif";
+        else
+        document.getElementById("fan").src =  "fan.png"
+    });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/light_device").on("value", function(snapshot){
+        var ss = snapshot.val();
+        if (ss==1)
+        document.getElementById("light").src = "light_bulb.png";
+        else
+        document.getElementById("light").src =  "light_bulb_off.png"
+    });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/heating_lamp").on("value", function(snapshot){
+        var ss = snapshot.val();
+        if (ss==1)
+        document.getElementById("heating_lamp").src = "light_bulb.png";
+        else
+        document.getElementById("heating_lamp").src =  "light_bulb_off.png"
+    });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/pump1").on("value", function(snapshot){
+        var ss = snapshot.val();
+        if (ss==1)
+        document.getElementById("pump1").src = "pump-unscreen.gif";
+        else
+        document.getElementById("pump1").src =  "pump4.png"
+    });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/pump2").on("value", function(snapshot){
+        var ss = snapshot.val();
+        if (ss==1)
+        document.getElementById("pump2").src = "pump-unscreen.gif";
+        else
+        document.getElementById("pump2").src =  "pump4.png"
+    });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/pump_mist").on("value", function(snapshot){
+        var ss = snapshot.val();
+        if (ss==1)
+        document.getElementById("pump_mist").src = "pump-unscreen.gif";
+        else
+        document.getElementById("pump_mist").src =  "pump4.png"
+    });
+    </script>
+
+    </body>
+</html>

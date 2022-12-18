@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CÀI ĐẶT</title>
+        
+        <link rel="stylesheet" href="scss.css">
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="logo">
+                <img src="logo-news.png" alt="">
+            </div>
+            <div class="Name-group">
+                <h1>ĐỒ ÁN TỐT NGHIỆP</h1>
+            </div>
+        </div>
+        
+        <div id="main1" style="background-color: white; height: 200px;">
+            <div class="topnav">
+                <a class="active" href="index.html">HOME</a>
+                <a href="thietbi.html">THIẾT BỊ</a>
+                <a href="moitruong.html">MÔI TRƯỜNG</a>
+                <a href="setup.html">CÀI ĐẶT</a>  
+            </div>
+            <div id="time"> </div>
+            <script>
+                function dongho() {
+                var time = new Date();
+                var gio = time.getHours();
+                var phut = time.getMinutes();
+                var giay = time.getSeconds();
+                if (gio < 10) 
+                gio = "0" + gio;
+                if (phut < 10) 
+                phut = "0" + phut;
+                if (giay < 10) 
+                giay = "0" + giay;
+                document.getElementById("time").innerHTML = gio + ":" + phut + ":" + giay;
+                setTimeout("dongho()", 1000);
+                };
+                dongho();
+            </script>
+        </div>
+
+        <div id="main6">
+            <div id="setup_nd"> 
+                <h1><img src="temp.png" id="setup_nd1"></h1>
+                <h2>Nhiệt độ</h2>
+            </div>
+
+            <div id="setup_da"> 
+                <h3><img src="humid.png" id="setup_da1"></h3>
+                <h4>Độ ẩm</h4>
+            </div>
+        
+            <div id="setup_as"> 
+                <h5><img src="anhsang.jpg" id="setup_as1"></h5>
+                <h6>Ánh sáng</h6>
+            </div>
+        
+            <div id="setup_thongso">
+                <h7 id="setup_nhietdo"></h7>
+                <h7 id="setup_doam"></h7>
+                <h7 id="setup_anhsang"></h7>
+            </div>
+        </div>
+
+        <div id="main7">
+            <div id="setup_da_dat1">
+                <h1><img src="humid.png" id="setup_da2"></h1>
+                <h2 style="width: 400px; margin-left: 20%;">Độ ẩm đất 1</h2>
+            </div>
+
+            <div id="setup_da_dat2">
+                <h1><img src="humid.png" id="setup_da3"></h1>
+                <h4 style="width: 200px; margin-left: 70%;">Độ ẩm đất 2</h4>
+            </div>
+
+            <div id="setup_thongso_dat">
+                <h7 id="setup_doam_dat1"></h7>
+                <h7 id="setup_doam_dat2"></h7>
+            </div>
+        </div>
+
+        <script src="scripts.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+
+<script>
+  var firebaseConfig = {
+  apiKey: "AIzaSyD9FshL63D_x-XrGJrQ9vkSb5VRmIGHrIk",
+  authDomain: "doantotnghiep-692fb.firebaseapp.com",
+  databaseURL: "https://doantotnghiep-692fb-default-rtdb.firebaseio.com",
+  projectId: "doantotnghiep-692fb",
+  storageBucket: "doantotnghiep-692fb.appspot.com",
+  messagingSenderId: "1042420430022",
+  appId: "1:1042420430022:web:210140d841759a22a7d3c7",
+  measurementId: "G-Z5LW8TKPPS"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+
+    <script>
+        firebase.database().ref("/current/set_temp").on("value", function(snapshot) {
+            var temp = snapshot.val() + "°C";
+            document.getElementById("setup_nhietdo").innerHTML = temp;
+        });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/set_humidity").on("value", function(snapshot) {
+            var temp = snapshot.val() + "%";
+            document.getElementById("setup_doam").innerHTML = temp;
+        });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/set_light_sensor").on("value", function(snapshot) {
+            var temp = snapshot.val() + "lux";
+            document.getElementById("setup_anhsang").innerHTML = temp;
+        });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/set_soil_1").on("value", function(snapshot) {
+            var temp = snapshot.val() + "%";
+            document.getElementById("setup_doam_dat1").innerHTML = temp;
+        });
+    </script>
+
+    <script>
+        firebase.database().ref("/current/set_soil_2").on("value", function(snapshot) {
+            var temp = snapshot.val() + "%";
+            document.getElementById("setup_doam_dat2").innerHTML = temp;
+        });
+    </script>
+
+    </body>
+</html>

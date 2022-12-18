@@ -1,0 +1,719 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    width: 1000px;
+    margin: 0px auto;
+    font-family: tahoma;
+    font-size: 28px;
+    /* background-image: url(back.jpg); */
+    background-image: url(nam.jpg);
+    background-size: cover;
+    background-attachment: fixed; 
+}
+
+#header{
+    background: white;
+    height: 120px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#header .logo{
+    float: left;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+#header .Name-group{
+    color: red;
+    line-height: 120px;
+    text-align: center;
+    font-size: 20px;
+}
+
+#main1 {
+    width: 1000px;
+    /* background-image: url(pink.jpg); */
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#main1 .topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+  
+#main1 .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  
+#main1 .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+#main1 .topnav a.active {
+    background-color: #04AA6D;
+    color: white;
+}
+
+#time{
+    text-align: center;
+    width: 200px;
+    border: 5px solid blue;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 20px;
+    background-color: blue;
+    color: white;
+}
+
+#main2 {
+    width: 1000px;
+    height: 30px;
+    float:left;
+    min-height: 600px;
+}
+
+#main2 .container .mySlides img{
+    margin-left: 300px;
+}
+
+.container {
+    position: relative;
+}
+
+.mySlides {
+    display: none;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: black;
+    font-weight: bold;
+    font-size: 50px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    margin-left: 300px;
+    top: 0;
+}
+
+.caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 16.66%;
+}
+
+.demo {
+    opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+    opacity: 1;
+}
+
+#main3{
+    padding-top: 62%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#footer {
+    background-image: url(black.jpg);
+    width: 1000px;
+    text-align: center;
+    height: 180px;
+    color:white;
+    clear: left;
+}
+
+#footer #tenthanhvien {
+    margin: 0;
+    padding: 0;
+}
+
+#footer #tenthanhvien .thieuphuc {
+    list-style: none;
+    float: left;
+    font-size: 12px;
+    border-bottom: 5px;
+    margin-top: 15px; 
+    margin-left: 27%;
+    margin-right: 10%;
+}
+
+#footer #tenthanhvien .thieuphuc img {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+#footer #tenthanhvien .truong {
+    list-style: none;
+    float: left;
+    font-size: 12px;
+    border-bottom: 5px;
+    margin-top: 15px; 
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#footer #tenthanhvien .truong img {
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+/*--------------------- MÔI TRƯỜNG -------------------------- */
+#main4 {
+    background: white;
+    width: 1000px;
+    height: 150px;
+    float:left;
+    min-height: 450px;
+}
+
+#nd{
+    width: 100px;
+    height: 120px;
+    margin-left: 8%;
+    margin-top: 1%;
+    float: left;
+}
+img#nd1 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+}
+h2 
+{
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+    margin-left: 70%;
+    margin-top: 20px;
+    color: black;
+}
+
+#da{
+    width: 100px;
+    height: 120px;
+    margin-left: 20%;
+    float: left;
+    margin-top: 1%;
+}
+img#da1 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+}
+h4 
+{
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+    margin-left: 80%;
+    margin-top: 25px;
+    color: black;
+}
+#as{
+    width: 100px;
+    height: 120px;
+    margin-right: 20%;
+    margin-top: 1%;
+    float: right;
+}
+img#as1 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: -10%;
+}
+h6{
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+    margin-left: 35%;
+    margin-top: 25%;
+    color: black;
+}
+
+.thongso
+{
+    width: 90%;
+    height: 20%;
+    position: relative;
+    top:50%;
+    margin-left:0px ;
+}
+#nhietdo
+{
+    font-size: 30px;
+    position: relative;
+    right:30%;
+    margin-top: 300px;
+    float: left;
+    color: red;
+}
+#doam
+{
+    font-size: 30px;
+    position: relative;
+    left: -9%;
+    margin-top: 300px;
+    float: left;
+    color: blue;
+}
+#anhsang
+{
+    font-size: 30px;
+    position: relative;
+    margin-top: 165px;
+    left: -16%;
+    float: right;
+    color: green;
+}
+
+#main5 {
+    background: white;
+    width: 1000px;
+    height: 90px;
+    float:left;
+    min-height: 500px;
+}
+
+#da_dat1{
+    width: 100px;
+    height: 120px;
+    margin-left: 25%;
+    margin-top: 1%;
+    float: left;
+}
+img#da2 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+}
+/* h2 
+{
+    font-size: 30px;
+    width: 200px;
+    height: 100px;
+    margin-left: 35%;
+    margin-top: 20px;
+    color: black;
+} */
+
+#da_dat2{
+    width: 100px;
+    height: 120px;
+    margin-left: 20%;
+    float: left;
+    margin-top: 1%;
+}
+img#da3 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+}
+/* h4 
+{
+    font-size: 30px;
+    width: 200px;
+    height: 100px;
+    margin-left: 35%;
+    margin-top: 25px;
+    color: black;
+} */
+
+.thongso_dat
+{
+    width: 90%;
+    height: 20%;
+    position: relative;
+    top:50%;
+    margin-left:0px ;
+}
+#doam_dat1
+{
+    font-size: 30px;
+    position: relative;
+    right:30%;
+    margin-top: 300px;
+    float: left;
+    color:  rosybrown;
+}
+#doam_dat2
+{
+    font-size: 30px;
+    position: relative;
+    left: -4%;
+    margin-top: 300px;
+    float: left;
+    color: orange;
+}
+/*--------------------- MÔI TRƯỜNG -------------------------- */
+
+/*--------------------- SETUP ------------------------------- */
+#main6 {
+    background: white;
+    width: 1000px;
+    height: 150px;
+    float:left;
+    min-height: 450px;
+}
+
+#setup_nd{
+    width: 100px;
+    height: 120px;
+    margin-left: 8%;
+    margin-top: 1%;
+    float: left;
+}
+img#setup_nd1 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+}
+h2 
+{
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+    margin-left: 70%;
+    margin-top: 20px;
+    color: black;
+}
+
+#setup_da{
+    width: 100px;
+    height: 120px;
+    margin-left: 20%;
+    float: left;
+    margin-top: 1%;
+}
+img#setup_da1 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+}
+h4 
+{
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+    margin-left: 80%;
+    margin-top: 25px;
+    color: black;
+}
+#setup_as{
+    width: 100px;
+    height: 120px;
+    margin-right: 20%;
+    margin-top: 1%;
+    float: right;
+}
+img#setup_as1 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: -10%;
+}
+h6{
+    font-size: 30px;
+    width: 150px;
+    height: 100px;
+    margin-left: 35%;
+    margin-top: 25%;
+    color: black;
+}
+
+.setup_thongso
+{
+    width: 90%;
+    height: 20%;
+    position: relative;
+    top:50%;
+    margin-left:0px ;
+}
+#setup_nhietdo
+{
+    font-size: 30px;
+    position: relative;
+    right:30%;
+    margin-top: 300px;
+    float: left;
+    color: red;
+}
+#setup_doam
+{
+    font-size: 30px;
+    position: relative;
+    left: -8%;
+    margin-top: 300px;
+    float: left;
+    color: blue;
+}
+#setup_anhsang
+{
+    font-size: 30px;
+    position: relative;
+    margin-top: 300px;
+    left: 13%;
+    float: right;
+    color: green;
+}
+
+#main7 {
+    background: white;
+    width: 1000px;
+    height: 90px;
+    float:left;
+    min-height: 500px;
+}
+
+#setup_da_dat1{
+    width: 100px;
+    height: 120px;
+    margin-left: 25%;
+    margin-top: 1%;
+    float: left;
+}
+img#setup_da2 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 5px;
+}
+
+#setup_da_dat2{
+    width: 100px;
+    height: 120px;
+    margin-left: 20%;
+    float: left;
+    margin-top: 1%;
+}
+img#setup_da3 
+{
+    width: 200px;
+    height: 200px;
+    margin-left: 50%;
+}
+
+.setup_thongso_dat
+{
+    width: 90%;
+    height: 20%;
+    position: relative;
+    top:50%;
+    margin-left:0px ;
+}
+#setup_doam_dat1
+{
+    font-size: 30px;
+    position: relative;
+    right:32%;
+    margin-top: 300px;
+    float: left;
+    color:  rosybrown;
+}
+#setup_doam_dat2
+{
+    font-size: 30px;
+    position: relative;
+    left: -4%;
+    margin-top: 300px;
+    float: left;
+    color: orange;
+}
+/*--------------------- SETUP ------------------------------- */
+
+/*--------------------- THIẾT BỊ ------------------------------- */
+#maintop {
+    height: 300px;
+    width: 1000px;
+    background-image: url(pink.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#maintop h1 {
+    width: 200px;
+    height: 225px;
+    display: inline-block;
+    border-style: inset;
+    margin-left: 9.5%;
+    margin-top: 2%;
+}
+
+#maintop h2{
+    float: left;
+    margin-left: 18%;
+    margin-top: -4%;
+    font-size: 20px;
+    font-family: tahoma;
+    color: black;
+}
+
+#maintop h3{
+    float: left;
+    margin-left: 16%;
+    margin-top: -4%;
+    font-size: 20px;
+    font-family: tahoma;
+    color: black;
+}
+
+#maintop h4{
+    float: left;
+    margin-left: 45%;
+    margin-top: -4%;
+    font-size: 20px;
+    font-family: tahoma;
+    color: black;
+}
+
+#fan{
+    width: 100%;
+    height: 100%;
+    margin: center;
+}
+
+#light{
+    width: 100%;
+    height: 100%;
+    margin: center;
+}
+
+#heating_lamp{
+    width: 100%;
+    height: 100%;
+    margin: center;
+}
+/* maintop1 */
+#maintop1 {
+    height: 300px;
+    width: 1000px;
+    background-image: url(pink.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#maintop1 h1 {
+    width: 200px;
+    height: 225px;
+    display: inline-block;
+    border-style: inset;
+    margin-left: 9.5%;
+    margin-top: -3%;
+}
+
+#maintop1 h2{
+    float: left;
+    margin-left: 15%;
+    margin-top: -4%;
+    font-size: 20px;
+    font-family: tahoma;
+    color: black;
+}
+
+#maintop1 h3{
+    float: left;
+    margin-left: 16%;
+    margin-top: -4%;
+    font-size: 20px;
+    font-family: tahoma;
+    color: black;
+}
+
+#maintop1 h4{
+    float: left;
+    margin-left: 46%;
+    margin-top: -4%;
+    font-size: 20px;
+    font-family: tahoma;
+    color: black;
+}
+
+#pump1{
+    width: 100%;
+    height: 100%;
+    margin: center;
+}
+
+#pump2{
+    width: 100%;
+    height: 100%;
+    margin: center;
+}
+
+#pump_mist{
+    width: 100%;
+    height: 100%;
+    margin: center;
+}
+
+
+
+/*--------------------- THIẾT BỊ ------------------------------- */
+
+

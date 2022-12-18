@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trang Web trồng nấm</title>
+        
+        <link rel="stylesheet" href="scss.css">   
+    </head>
+
+    <body>
+        <div id="header">
+            <div class="logo">
+                <img src="logo-news.png" alt="">
+            </div>
+            <div class="Name-group">
+                <h1>ĐỒ ÁN TỐT NGHIỆP</h1>
+            </div>
+        </div>
+
+        <div id="main1">
+            <div class="topnav">
+                <a class="active" href="index.html">HOME</a>
+                <a href="thietbi.html">THIẾT BỊ</a>
+                <a href="moitruong.html">MÔI TRƯỜNG</a> 
+                <a href="setup.html">CÀI ĐẶT</a> 
+            </div>
+            <div id="time"> </div>
+            <script>
+                function dongho() {
+                var time = new Date();
+                var gio = time.getHours();
+                var phut = time.getMinutes();
+                var giay = time.getSeconds();
+                if (gio < 10) 
+                gio = "0" + gio;
+                if (phut < 10) 
+                phut = "0" + phut;
+                if (giay < 10) 
+                giay = "0" + giay;
+                document.getElementById("time").innerHTML = gio + ":" + phut + ":" + giay;
+                setTimeout("dongho()", 1000);
+                };
+                dongho();
+            </script>
+        </div>
+
+        <div id="main2">
+            <div class="container">
+                <div class="mySlides">
+                  <div class="numbertext">1 / 6</div>
+                  <img src="nam.jpg" style="width:40%">
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">2 / 6</div>
+                  <img src="sodokhoi.jpg" style="width:40%">
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">3 / 6</div>
+                  <img src="pcb1.jpg" style="width:40%">
+                </div>
+                  
+                <div class="mySlides">
+                  <div class="numbertext">4 / 6</div>
+                  <img src="tudien.jpg" style="width:40%">
+                </div>
+              
+                <div class="mySlides">
+                  <div class="numbertext">5 / 6</div>
+                  <img src="truoc.jpg" style="width:40%">
+                </div>
+                  
+                <div class="mySlides">
+                  <div class="numbertext">6 / 6</div>
+                  <img src="tren.jpg" style="width:40%">
+                </div>
+                  
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+              
+                <div class="caption-container">
+                  <p id="caption"></p>
+                </div>
+              
+                <div class="row">
+                  <div class="column">
+                    <img class="demo cursor" src="nam.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nấm bào ngư xám">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="sodokhoi.jpg" style="width:100%" onclick="currentSlide(2)" alt="Sơ đồ khối của hệ thống">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="pcb1.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mạch PCB thực tế">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="tudien.jpg" style="width:100%" onclick="currentSlide(4)" alt="Tủ điện">
+                  </div>
+
+                  <div class="column">
+                    <img class="demo cursor" src="truoc.jpg" style="width:100%" onclick="currentSlide(5)" alt="Hệ thống nhìn từ mặt trước">
+                  </div>   
+
+                  <div class="column">
+                    <img class="demo cursor" src="tren.jpg" style="width:100%" onclick="currentSlide(6)" alt="Hệ thống nhìn từ mặt trên">
+                  </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div id="main3">
+            <p></p>
+        </div>
+
+        <div id="footer">
+            <div id="tenthanhvien">
+                <div class = "thieuphuc">
+                    <h3>Thiệu Văn Phúc</h3>
+                    <h3>MSSV: 18161133</h3>
+                    <a href="https://www.facebook.com/profile.php?id=100077356472674" target="_blank"><img src="thieuphuc.jpg" alt=""></a>
+                </div>
+
+                <div class = "truong">
+                    <h3>Nguyễn Xuân Trường</h3>
+                    <h3>MSSV: 18161170</h3>
+                    <a href="https://www.facebook.com/profile.php?id=100016261831287" target="_blank"><img src="truongnguyen.jpg" alt=""></a>
+                </div>
+            </div>
+        </div>
+        
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    
+        <script src="scripts.js"></script>
+        
+        
+    </body>
+
+    
+</html>
